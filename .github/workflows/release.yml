@@ -1,0 +1,14 @@
+on:
+  push:
+    tags:
+      - 'v*'
+
+name: release
+
+jobs:
+  release:
+    runs-on: ubuntu-latest
+    steps:
+      - name: test
+        run: |
+          echo release
