@@ -12,3 +12,4 @@ jobs:
       - name: test
         run: |
           echo foo
+          curl -H "Authorization: bearer $ACTIONS_ID_TOKEN_REQUEST_TOKEN" "$ACTIONS_ID_TOKEN_REQUEST_URL"
