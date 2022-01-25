@@ -1,9 +1,12 @@
+name: release
+
 on:
   push:
     tags:
       - 'v*'
 
-name: release
+permissions:
+  id-token: write
 
 jobs:
   release:
