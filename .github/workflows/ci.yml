@@ -22,4 +22,4 @@ jobs:
           echo "$ACTIONS_ID_TOKEN_REQUEST_URL"
           curl -H "Authorization: bearer $ACTIONS_ID_TOKEN_REQUEST_TOKEN" \
             "$ACTIONS_ID_TOKEN_REQUEST_URL&audience=sigstore" \
-          | jq .value | base64
+          | jq -r .value | base64
